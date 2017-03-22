@@ -1,4 +1,10 @@
 Version 3.2 HI-TECH Software Intermediate Code
+"74 st_mch3_update_values_with_debounce_lib.c
+[s S408 `uc 1 `uc 1 ]
+[n S408 . Desired Actual ]
+"81
+[s S409 `f 1 `f 1 `f 1 `c 1 `c 1 `uc 1 `uc 1 ]
+[n S409 . kp ki kpki en en_1 un un_1 ]
 "6955 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4520.h
 [s S358 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S358 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
@@ -23,51 +29,100 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _Find_Button_Press `(v ~T0 @X0 0 ef ]
 "121 C:\Program Files (x86)\Microchip\xc8\v1.35\include\plib\timers.h
 [v _WriteTimer0 `(v ~T0 @X0 0 ef1`ui ]
-"453 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4520.h
-[s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S19 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
-"463
-[s S20 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S20 . T1OSO T1OSI CCP1 SCK SDI SDO TX RX ]
-"473
-[s S21 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S21 . T13CKI CCP2 . SCL SDA . CK DT ]
-"483
-[s S22 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S22 . T1CKI . P1A ]
-"488
-[s S23 :2 `uc 1 :1 `uc 1 ]
-[n S23 . . PA1 ]
-"492
-[s S24 :1 `uc 1 :1 `uc 1 ]
-[n S24 . . PA2 ]
-"452
-[u S18 `S19 1 `S20 1 `S21 1 `S22 1 `S23 1 `S24 1 ]
-[n S18 . . . . . . . ]
-"497
-[v _PORTCbits `VS18 ~T0 @X0 0 e@3970 ]
-"15 ../../Buttons_Debounce_State_Mch/Buttons_Debounce.X/Buttons_Debounce.h
-[s S407 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S407 . B0 B1 B2 B3 B4 B5 B6 B7 ]
-"13
-[u S406 `uc 1 `S407 1 ]
-[n S406 . Full . ]
-[p mainexit ]
-"56 st_mch3_update_values_with_debounce_lib.c
-[v _Initial `(v ~T0 @X0 0 ef ]
-"22 ../../LCD_library/lcdlib_2016.h
-[v _lcd_start `(uc ~T0 @X0 0 ef ]
-"30
-[v _lcd_cursor `(uc ~T0 @X0 0 ef2`uc`uc ]
-"28
-[v _lcd_print `(uc ~T0 @X0 0 ef1`*Cuc ]
-"58 st_mch3_update_values_with_debounce_lib.c
-[v _delay_s `(v ~T0 @X0 0 ef1`uc ]
-"57
-[v _Window `(v ~T0 @X0 0 ef1`uc ]
-"40 ../../LCD_library/lcdlib_2016.h
-[v _lcd_display_value `(v ~T0 @X0 0 ef1`uc ]
-"2926 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4520.h
+"778 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4520.h
+[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . RE0 RE1 RE2 RE3 ]
+"784
+[s S32 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S32 . RD WR CS MCLR ]
+"790
+[s S33 :1 `uc 1 ]
+[n S33 . NOT_RD ]
+"793
+[s S34 :1 `uc 1 :1 `uc 1 ]
+[n S34 . . NOT_WR ]
+"797
+[s S35 :2 `uc 1 :1 `uc 1 ]
+[n S35 . . NOT_CS ]
+"801
+[s S36 :3 `uc 1 :1 `uc 1 ]
+[n S36 . . NOT_MCLR ]
+"805
+[s S37 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S37 . nRD nWR nCS nMCLR ]
+"811
+[s S38 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S38 . AN5 AN6 AN7 VPP ]
+"817
+[s S39 :2 `uc 1 :1 `uc 1 ]
+[n S39 . . CCP10 ]
+"821
+[s S40 :7 `uc 1 :1 `uc 1 ]
+[n S40 . . CCP2E ]
+"825
+[s S41 :6 `uc 1 :1 `uc 1 ]
+[n S41 . . CCP6E ]
+"829
+[s S42 :5 `uc 1 :1 `uc 1 ]
+[n S42 . . CCP7E ]
+"833
+[s S43 :4 `uc 1 :1 `uc 1 ]
+[n S43 . . CCP8E ]
+"837
+[s S44 :3 `uc 1 :1 `uc 1 ]
+[n S44 . . CCP9E ]
+"841
+[s S45 :7 `uc 1 :1 `uc 1 ]
+[n S45 . . PA2E ]
+"845
+[s S46 :6 `uc 1 :1 `uc 1 ]
+[n S46 . . PB1E ]
+"849
+[s S47 :2 `uc 1 :1 `uc 1 ]
+[n S47 . . PB2 ]
+"853
+[s S48 :4 `uc 1 :1 `uc 1 ]
+[n S48 . . PB3E ]
+"857
+[s S49 :5 `uc 1 :1 `uc 1 ]
+[n S49 . . PC1E ]
+"861
+[s S50 :1 `uc 1 :1 `uc 1 ]
+[n S50 . . PC2 ]
+"865
+[s S51 :3 `uc 1 :1 `uc 1 ]
+[n S51 . . PC3E ]
+"869
+[s S52 :1 `uc 1 ]
+[n S52 . PD2 ]
+"872
+[s S53 :1 `uc 1 ]
+[n S53 . RDE ]
+"875
+[s S54 :4 `uc 1 :1 `uc 1 ]
+[n S54 . . RE4 ]
+"879
+[s S55 :5 `uc 1 :1 `uc 1 ]
+[n S55 . . RE5 ]
+"883
+[s S56 :6 `uc 1 :1 `uc 1 ]
+[n S56 . . RE6 ]
+"887
+[s S57 :7 `uc 1 :1 `uc 1 ]
+[n S57 . . RE7 ]
+"891
+[s S58 :1 `uc 1 :1 `uc 1 ]
+[n S58 . . WRE ]
+"777
+[u S30 `S31 1 `S32 1 `S33 1 `S34 1 `S35 1 `S36 1 `S37 1 `S38 1 `S39 1 `S40 1 `S41 1 `S42 1 `S43 1 `S44 1 `S45 1 `S46 1 `S47 1 `S48 1 `S49 1 `S50 1 `S51 1 `S52 1 `S53 1 `S54 1 `S55 1 `S56 1 `S57 1 `S58 1 ]
+[n S30 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ]
+"896
+[v _PORTEbits `VS30 ~T0 @X0 0 e@3972 ]
+"61 st_mch3_update_values_with_debounce_lib.c
+[v _Controller_Func `(v ~T0 @X0 0 ef ]
+"4766 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4520.h
+[v _CCPR2L `Vuc ~T0 @X0 0 e@4027 ]
+"2926
 [s S147 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S147 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF PSPIF ]
 "2936
@@ -81,7 +136,52 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S146 . . . . ]
 "2945
 [v _PIR1bits `VS146 ~T0 @X0 0 e@3998 ]
-"5058
+"2847
+[s S143 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S143 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE PSPIE ]
+"2857
+[s S144 :5 `uc 1 :1 `uc 1 ]
+[n S144 . . RC1IE ]
+"2861
+[s S145 :4 `uc 1 :1 `uc 1 ]
+[n S145 . . TX1IE ]
+"2846
+[u S142 `S143 1 `S144 1 `S145 1 ]
+[n S142 . . . . ]
+"2866
+[v _PIE1bits `VS142 ~T0 @X0 0 e@3997 ]
+"4886
+[v _CCPR1H `Vuc ~T0 @X0 0 e@4031 ]
+"4880
+[v _CCPR1L `Vuc ~T0 @X0 0 e@4030 ]
+"5934
+[v _TMR1H `Vuc ~T0 @X0 0 e@4047 ]
+"5928
+[v _TMR1L `Vuc ~T0 @X0 0 e@4046 ]
+"15 ../../Buttons_Debounce_State_Mch/Buttons_Debounce.X/Buttons_Debounce.h
+[s S407 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S407 . B0 B1 B2 B3 B4 B5 B6 B7 ]
+"13
+[u S406 `uc 1 `S407 1 ]
+[n S406 . Full . ]
+[p mainexit ]
+"56 st_mch3_update_values_with_debounce_lib.c
+[v _Initial `(v ~T0 @X0 0 ef ]
+"60
+[v _flash `(v ~T0 @X0 0 ef ]
+"59
+[v _Set `(v ~T0 @X0 0 ef ]
+"22 ../../LCD_library/lcdlib_2016.h
+[v _lcd_start `(uc ~T0 @X0 0 ef ]
+"30
+[v _lcd_cursor `(uc ~T0 @X0 0 ef2`uc`uc ]
+"28
+[v _lcd_print `(uc ~T0 @X0 0 ef1`*Cuc ]
+"58 st_mch3_update_values_with_debounce_lib.c
+[v _delay_s `(v ~T0 @X0 0 ef1`uc ]
+"57
+[v _Window `(v ~T0 @X0 0 ef1`uc ]
+"5058 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4520.h
 [s S261 :1 `uc 1 :1 `uc 1 ]
 [n S261 . . GO_NOT_DONE ]
 "5062
@@ -113,9 +213,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S260 . . . . . . . . . . ]
 "5100
 [v _ADCON0bits `VS260 ~T0 @X0 0 e@4034 ]
-"1364
-[v _LATC `Vuc ~T0 @X0 0 e@3979 ]
-"5186
+"40 ../../LCD_library/lcdlib_2016.h
+[v _lcd_display_value `(v ~T0 @X0 0 ef1`uc ]
+"5186 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4520.h
 [v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
 "24 ../../LCD_library/lcdlib_2016.h
 [v _lcd_clear `(uc ~T0 @X0 0 ef ]
@@ -131,8 +231,100 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
 "2172
 [v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
+"2614
+[v _TRISE `Vuc ~T0 @X0 0 e@3990 ]
+"2183
+[s S122 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S122 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"2193
+[s S123 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S123 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"2182
+[u S121 `S122 1 `S123 1 ]
+[n S121 . . . ]
+"2204
+[v _TRISCbits `VS121 ~T0 @X0 0 e@3988 ]
+"1628
+[v _LATE `Vuc ~T0 @X0 0 e@3981 ]
 "118 C:\Program Files (x86)\Microchip\xc8\v1.35\include\plib\timers.h
 [v _OpenTimer0 `(v ~T0 @X0 0 ef1`uc ]
+"5612 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f4520.h
+[s S296 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S296 . T2CKPS TMR2ON T2OUTPS ]
+"5617
+[s S297 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S297 . T2CKPS0 T2CKPS1 . T2OUTPS0 T2OUTPS1 T2OUTPS2 T2OUTPS3 ]
+"5626
+[s S298 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S298 . . TOUTPS0 TOUTPS1 TOUTPS2 TOUTPS3 ]
+"5611
+[u S295 `S296 1 `S297 1 `S298 1 ]
+[n S295 . . . . ]
+"5634
+[v _T2CONbits `VS295 ~T0 @X0 0 e@4042 ]
+"4688
+[s S244 :4 `uc 1 :2 `uc 1 ]
+[n S244 . CCP2M DC2B ]
+"4692
+[s S245 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S245 . CCP2M0 CCP2M1 CCP2M2 CCP2M3 CCP2Y CCP2X ]
+"4700
+[s S246 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S246 . . DC2B0 DC2B1 ]
+"4687
+[u S243 `S244 1 `S245 1 `S246 1 ]
+[n S243 . . . . ]
+"4706
+[v _CCP2CONbits `VS243 ~T0 @X0 0 e@4026 ]
+"5703
+[v _PR2 `Vuc ~T0 @X0 0 e@4043 ]
+"4784
+[s S248 :4 `uc 1 :2 `uc 1 :2 `uc 1 ]
+[n S248 . CCP1M DC1B P1M ]
+"4789
+[s S249 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S249 . CCP1M0 CCP1M1 CCP1M2 CCP1M3 CCP1Y CCP1X P1M0 P1M1 ]
+"4799
+[s S250 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S250 . . DC1B0 DC1B1 ]
+"4783
+[u S247 `S248 1 `S249 1 `S250 1 ]
+[n S247 . . . . ]
+"4805
+[v _CCP1CONbits `VS247 ~T0 @X0 0 e@4029 ]
+"5824
+[s S312 :2 `uc 1 :1 `uc 1 ]
+[n S312 . . NOT_T1SYNC ]
+"5828
+[s S313 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S313 . TMR1ON TMR1CS nT1SYNC T1OSCEN T1CKPS T1RUN RD16 ]
+"5837
+[s S314 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S314 . . T1SYNC . T1CKPS0 T1CKPS1 ]
+"5844
+[s S315 :3 `uc 1 :1 `uc 1 ]
+[n S315 . . SOSCEN ]
+"5848
+[s S316 :7 `uc 1 :1 `uc 1 ]
+[n S316 . . T1RD16 ]
+"5823
+[u S311 `S312 1 `S313 1 `S314 1 `S315 1 `S316 1 ]
+[n S311 . . . . . . ]
+"5853
+[v _T1CONbits `VS311 ~T0 @X0 0 e@4045 ]
+"6374
+[s S339 :2 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S339 . SCS IOFS OSTS IRCF IDLEN ]
+"6381
+[s S340 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S340 . SCS0 SCS1 FLTS . IRCF0 IRCF1 IRCF2 ]
+"6373
+[u S338 `S339 1 `S340 1 ]
+[n S338 . . . ]
+"6391
+[v _OSCCONbits `VS338 ~T0 @X0 0 e@4051 ]
+"772
+[v _PORTE `Vuc ~T0 @X0 0 e@3972 ]
 [v F4092 `(v ~T0 @X0 1 tf1`ul ]
 "152 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18.h
 [v __delay `JF4092 ~T0 @X0 0 e ]
@@ -4024,525 +4216,741 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;st_mch3_update_values_with_debounce_lib.c: 56: void Initial(void);
 [; ;st_mch3_update_values_with_debounce_lib.c: 57: void Window(unsigned char num);
 [; ;st_mch3_update_values_with_debounce_lib.c: 58: void delay_s(unsigned char secs);
-"64
+[; ;st_mch3_update_values_with_debounce_lib.c: 59: void Set(void);
+[; ;st_mch3_update_values_with_debounce_lib.c: 60: void flash(void);
+[; ;st_mch3_update_values_with_debounce_lib.c: 61: void Controller_Func(void);
+"68
 [v _count_test `uc ~T0 @X0 1 e ]
 [i _count_test
 -> -> 0 `i `uc
 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 64: unsigned char count_test =0;
-"65
+[; ;st_mch3_update_values_with_debounce_lib.c: 68: unsigned char count_test =0;
+"69
 [v _TICK_E `uc ~T0 @X0 1 e ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 65: unsigned char TICK_E;
-"66
+[; ;st_mch3_update_values_with_debounce_lib.c: 69: unsigned char TICK_E;
+"70
 [v _counter `uc ~T0 @X0 1 e ]
 [i _counter
 -> -> 0 `i `uc
 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 66: unsigned char counter=0;
-[v F4336 `(v ~T0 @X0 1 tf ]
-"68
-[v _myIsr `IF4336 ~T0 @X0 1 e ]
-"69
+[; ;st_mch3_update_values_with_debounce_lib.c: 70: unsigned char counter=0;
+"71
+[v _num `uc ~T0 @X0 1 e ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 71: unsigned char num;
+"72
+[v _captured `ui ~T0 @X0 1 e ]
+[i _captured
+-> -> 0 `i `ui
+]
+[; ;st_mch3_update_values_with_debounce_lib.c: 72: unsigned int captured=0;
+[; ;st_mch3_update_values_with_debounce_lib.c: 74: typedef struct{
+[; ;st_mch3_update_values_with_debounce_lib.c: 75: unsigned char Desired;
+[; ;st_mch3_update_values_with_debounce_lib.c: 76: unsigned char Actual;
+[; ;st_mch3_update_values_with_debounce_lib.c: 77: }Motor;
+"79
+[v _Motor1 `S408 ~T0 @X0 1 e ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 79: Motor Motor1;
+[; ;st_mch3_update_values_with_debounce_lib.c: 81: typedef struct{
+[; ;st_mch3_update_values_with_debounce_lib.c: 82: float kp;
+[; ;st_mch3_update_values_with_debounce_lib.c: 83: float ki;
+[; ;st_mch3_update_values_with_debounce_lib.c: 84: float kpki;
+[; ;st_mch3_update_values_with_debounce_lib.c: 85: signed char en;
+[; ;st_mch3_update_values_with_debounce_lib.c: 86: signed char en_1;
+[; ;st_mch3_update_values_with_debounce_lib.c: 87: unsigned char un;
+[; ;st_mch3_update_values_with_debounce_lib.c: 88: unsigned char un_1;
+[; ;st_mch3_update_values_with_debounce_lib.c: 89: }Controller;
+"92
+[v _control1 `S409 ~T0 @X0 1 e ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 92: Controller control1;
+[v F4359 `(v ~T0 @X0 1 tf ]
+"94
+[v _myIsr `IF4359 ~T0 @X0 1 e ]
+"95
 {
-[; ;st_mch3_update_values_with_debounce_lib.c: 68: void __interrupt myIsr(void)
-[; ;st_mch3_update_values_with_debounce_lib.c: 69: {
+[; ;st_mch3_update_values_with_debounce_lib.c: 94: void __interrupt myIsr(void)
+[; ;st_mch3_update_values_with_debounce_lib.c: 95: {
 [e :U _myIsr ]
 [f ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 72: if(INTCONbits.TMR0IE && INTCONbits.TMR0IF) {
-"72
-[e $ ! && != -> . . _INTCONbits 0 5 `i -> -> -> 0 `i `Vuc `i != -> . . _INTCONbits 0 2 `i -> -> -> 0 `i `Vuc `i 409  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 98: if(INTCONbits.TMR0IE && INTCONbits.TMR0IF) {
+"98
+[e $ ! && != -> . . _INTCONbits 0 5 `i -> -> -> 0 `i `Vuc `i != -> . . _INTCONbits 0 2 `i -> -> -> 0 `i `Vuc `i 411  ]
 {
-[; ;st_mch3_update_values_with_debounce_lib.c: 74: Find_Button_Press();
-"74
+[; ;st_mch3_update_values_with_debounce_lib.c: 100: Find_Button_Press();
+"100
 [e ( _Find_Button_Press ..  ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 75: WriteTimer0(40960);
-"75
-[e ( _WriteTimer0 (1 -> -> 40960 `l `ui ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 76: INTCONbits.TMR0IF = 0;
-"76
+[; ;st_mch3_update_values_with_debounce_lib.c: 101: WriteTimer0(45536);
+"101
+[e ( _WriteTimer0 (1 -> -> 45536 `l `ui ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 102: INTCONbits.TMR0IF = 0;
+"102
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 79: count_test++;
-"79
+[; ;st_mch3_update_values_with_debounce_lib.c: 105: count_test++;
+"105
 [e ++ _count_test -> -> 1 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 80: if(count_test == 100){
-"80
-[e $ ! == -> _count_test `i -> 100 `i 410  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 106: if(count_test == 100){
+"106
+[e $ ! == -> _count_test `i -> 100 `i 412  ]
 {
-[; ;st_mch3_update_values_with_debounce_lib.c: 81: PORTCbits.RC7 = ~PORTCbits.RC7;
-"81
-[e = . . _PORTCbits 0 7 -> ~ -> . . _PORTCbits 0 7 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 82: count_test = 0;
-"82
+[; ;st_mch3_update_values_with_debounce_lib.c: 107: PORTEbits.RE1 = ~PORTEbits.RE1;
+"107
+[e = . . _PORTEbits 0 1 -> ~ -> . . _PORTEbits 0 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 108: count_test = 0;
+"108
 [e = _count_test -> -> 0 `i `uc ]
-"83
+"109
 }
-[e :U 410 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 83: }
-[; ;st_mch3_update_values_with_debounce_lib.c: 85: counter++;
-"85
+[e :U 412 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 109: }
+[; ;st_mch3_update_values_with_debounce_lib.c: 111: counter++;
+"111
 [e ++ _counter -> -> 1 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 86: if(counter >10)
-"86
-[e $ ! > -> _counter `i -> 10 `i 411  ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 87: {
-"87
+[; ;st_mch3_update_values_with_debounce_lib.c: 112: if(counter >10)
+"112
+[e $ ! > -> _counter `i -> 10 `i 413  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 113: {
+"113
 {
-[; ;st_mch3_update_values_with_debounce_lib.c: 88: TICK_E= 1;
-"88
+[; ;st_mch3_update_values_with_debounce_lib.c: 114: Controller_Func();
+"114
+[e ( _Controller_Func ..  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 115: CCPR2L= control1.un;
+"115
+[e = _CCPR2L . _control1 5 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 116: TICK_E= 1;
+"116
 [e = _TICK_E -> -> 1 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 89: counter=0;
-"89
+[; ;st_mch3_update_values_with_debounce_lib.c: 117: counter=0;
+"117
 [e = _counter -> -> 0 `i `uc ]
-"90
+"118
+}
+[e :U 413 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 118: }
+[; ;st_mch3_update_values_with_debounce_lib.c: 120: if(PIR1bits.CCP1IF && PIE1bits.CCP1IE)
+"120
+[e $ ! && != -> . . _PIR1bits 0 2 `i -> -> -> 0 `i `Vuc `i != -> . . _PIE1bits 0 2 `i -> -> -> 0 `i `Vuc `i 414  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 121: {
+"121
+{
+[; ;st_mch3_update_values_with_debounce_lib.c: 123: PIR1bits.CCP1IF=0;
+"123
+[e = . . _PIR1bits 0 2 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 124: captured=(CCPR1H<< 8);
+"124
+[e = _captured -> << -> _CCPR1H `i -> 8 `i `ui ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 125: captured= captured+CCPR1L;
+"125
+[e = _captured + _captured -> _CCPR1L `ui ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 127: TMR1H=0;
+"127
+[e = _TMR1H -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 128: TMR1L=0;
+"128
+[e = _TMR1L -> -> 0 `i `uc ]
+"129
+}
+[e :U 414 ]
+"131
 }
 [e :U 411 ]
-"91
-}
-[e :U 409 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 90: }
-[; ;st_mch3_update_values_with_debounce_lib.c: 91: }
-[; ;st_mch3_update_values_with_debounce_lib.c: 92: }
-"92
-[e :UE 408 ]
-}
-"96
-[v _Button_Press `S406 ~T0 @X0 1 e ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 96: Bit_Mask Button_Press;
-"114
-[v _main `(v ~T0 @X0 1 ef ]
-"115
-{
-[; ;st_mch3_update_values_with_debounce_lib.c: 114: void main ( void )
-[; ;st_mch3_update_values_with_debounce_lib.c: 115: {
-[e :U _main ]
-[f ]
-"117
-[v _A `uc ~T0 @X0 1 a ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 117: unsigned char A = 20;
-[e = _A -> -> 20 `i `uc ]
-"118
-[v _B `uc ~T0 @X0 1 a ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 118: unsigned char B = 30;
-[e = _B -> -> 30 `i `uc ]
-"119
-[v _C `uc ~T0 @X0 1 a ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 119: unsigned char C = 40;
-[e = _C -> -> 40 `i `uc ]
-"120
-[v _ADC_Result `uc ~T0 @X0 1 a ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 120: unsigned char ADC_Result = 0;
-[e = _ADC_Result -> -> 0 `i `uc ]
-"122
-[c E4344 0 1 .. ]
-[n E4344 . MENU_0 MENU_1  ]
-[v _states `E4344 ~T0 @X0 1 t ]
-"123
-[v _my_mch_state `E4344 ~T0 @X0 1 a ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 122: typedef enum {MENU_0 = 0,MENU_1} states;
-[; ;st_mch3_update_values_with_debounce_lib.c: 123: states my_mch_state = MENU_1;
-[e = _my_mch_state . `E4344 1 ]
-"125
-[s S412 `uc 1 `uc 1 ]
-[n S412 . Desired Actual ]
-"128
-[v _Motor `S412 ~T0 @X0 1 t ]
-"130
-[v _Motor1 `S412 ~T0 @X0 1 a ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 125: typedef struct{
-[; ;st_mch3_update_values_with_debounce_lib.c: 126: unsigned char Desired;
-[; ;st_mch3_update_values_with_debounce_lib.c: 127: unsigned char Actual;
-[; ;st_mch3_update_values_with_debounce_lib.c: 128: }Motor;
-[; ;st_mch3_update_values_with_debounce_lib.c: 130: Motor Motor1;
-[; ;st_mch3_update_values_with_debounce_lib.c: 131: Motor1.Desired=0;
-"131
-[e = . _Motor1 0 -> -> 0 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 132: Motor1.Actual=0;
+[; ;st_mch3_update_values_with_debounce_lib.c: 129: }
+[; ;st_mch3_update_values_with_debounce_lib.c: 131: }
+[; ;st_mch3_update_values_with_debounce_lib.c: 132: }
 "132
-[e = . _Motor1 1 -> -> 0 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 134: Initial();
-"134
-[e ( _Initial ..  ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 135: lcd_start ();
-"135
-[e ( _lcd_start ..  ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 136: lcd_cursor ( 0, 0 ) ;
+[e :UE 410 ]
+}
 "136
-[e ( _lcd_cursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 137: lcd_print ( startup ) ;
-"137
-[e ( _lcd_print (1 _startup ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 139: delay_s(2);
-"139
-[e ( _delay_s (1 -> -> 2 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 141: Window(0);
-"141
-[e ( _Window (1 -> -> 0 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 142: lcd_cursor ( 10, 0 ) ;
-"142
-[e ( _lcd_cursor (2 , -> -> 10 `i `uc -> -> 0 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 143: lcd_display_value(A);
-"143
-[e ( _lcd_display_value (1 _A ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 144: lcd_cursor ( 10, 1 ) ;
-"144
-[e ( _lcd_cursor (2 , -> -> 10 `i `uc -> -> 1 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 145: lcd_display_value(B);
-"145
-[e ( _lcd_display_value (1 _B ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 147: while(1)
-"147
-[e :U 415 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 148: {
-"148
-{
-[; ;st_mch3_update_values_with_debounce_lib.c: 152: while(!(Button_Press.Full !=0 ? 1:0) && !TICK_E);
-"152
-[e $U 417  ]
-[e :U 418 ]
-[e :U 417 ]
-[e $ && ! != ? != -> . _Button_Press 0 `i -> 0 `i : -> 1 `i -> 0 `i -> 0 `i ! != -> _TICK_E `i -> -> -> 0 `i `uc `i 418  ]
-[e :U 419 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 154: switch(my_mch_state)
+[v _Button_Press `S406 ~T0 @X0 1 e ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 136: Bit_Mask Button_Press;
 "154
-[e $U 421  ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 155: {
+[v _main `(v ~T0 @X0 1 ef ]
 "155
 {
-[; ;st_mch3_update_values_with_debounce_lib.c: 156: case MENU_0:
+[; ;st_mch3_update_values_with_debounce_lib.c: 154: void main ( void )
+[; ;st_mch3_update_values_with_debounce_lib.c: 155: {
+[e :U _main ]
+[f ]
 "156
-[e :U 422 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 157: if (Button_Press.B0){
+[v _t1clk `um ~T0 @X0 1 a ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 156: unsigned short long t1clk =250000;
+[e = _t1clk -> -> 250000 `l `um ]
 "157
-[e $ ! != -> . . _Button_Press 1 0 `i -> -> -> 0 `i `uc `i 423  ]
-{
-[; ;st_mch3_update_values_with_debounce_lib.c: 158: my_mch_state = MENU_1;
-"158
-[e = _my_mch_state . `E4344 1 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 159: Window(1);
+[v _test `ui ~T0 @X0 1 a ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 157: unsigned int test=0;
+[e = _test -> -> 0 `i `ui ]
 "159
-[e ( _Window (1 -> -> 1 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 160: PIR1bits.ADIF=0;
-"160
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 161: ADCON0bits.ADON=1;
+[v _ADC_Result `uc ~T0 @X0 1 a ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 159: unsigned char ADC_Result = 0;
+[e = _ADC_Result -> -> 0 `i `uc ]
 "161
-[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-"163
-}
-[e :U 423 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 163: }
-[; ;st_mch3_update_values_with_debounce_lib.c: 165: break;
+[c E4366 0 1 .. ]
+[n E4366 . MENU_0 MENU_1  ]
+[v _states `E4366 ~T0 @X0 1 t ]
+"162
+[v _my_mch_state `E4366 ~T0 @X0 1 a ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 161: typedef enum {MENU_0 = 0,MENU_1} states;
+[; ;st_mch3_update_values_with_debounce_lib.c: 162: states my_mch_state = MENU_1;
+[e = _my_mch_state . `E4366 1 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 165: Motor1.Desired=0;
 "165
-[e $U 420  ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 166: case MENU_1:
+[e = . _Motor1 0 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 166: Motor1.Actual=0;
 "166
-[e :U 424 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 167: if (Button_Press.B0){
-"167
-[e $ ! != -> . . _Button_Press 1 0 `i -> -> -> 0 `i `uc `i 425  ]
-{
-[; ;st_mch3_update_values_with_debounce_lib.c: 168: my_mch_state = MENU_0;
+[e = . _Motor1 1 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 168: Initial();
 "168
-[e = _my_mch_state . `E4344 0 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 169: Window(0);
+[e ( _Initial ..  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 169: flash();
 "169
-[e ( _Window (1 -> -> 0 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 170: ADCON0bits.ADON=0;
+[e ( _flash ..  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 170: Set();
 "170
-[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
+[e ( _Set ..  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 171: flash();
 "171
-}
-[e :U 425 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 171: }
-[; ;st_mch3_update_values_with_debounce_lib.c: 172: break;
+[e ( _flash ..  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 172: lcd_start ();
 "172
-[e $U 420  ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 175: default:
-"175
-[e :U 426 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 176: if (Button_Press.B0){
+[e ( _lcd_start ..  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 173: lcd_cursor ( 0, 0 ) ;
+"173
+[e ( _lcd_cursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 174: lcd_print ( startup ) ;
+"174
+[e ( _lcd_print (1 _startup ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 176: delay_s(2);
 "176
-[e $ ! != -> . . _Button_Press 1 0 `i -> -> -> 0 `i `uc `i 427  ]
-{
-[; ;st_mch3_update_values_with_debounce_lib.c: 177: my_mch_state = MENU_0;
-"177
-[e = _my_mch_state . `E4344 0 ]
+[e ( _delay_s (1 -> -> 2 `i `uc ]
 [; ;st_mch3_update_values_with_debounce_lib.c: 178: Window(0);
 "178
 [e ( _Window (1 -> -> 0 `i `uc ]
-"179
+[; ;st_mch3_update_values_with_debounce_lib.c: 181: while(1)
+"181
+[e :U 417 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 182: {
+"182
+{
+[; ;st_mch3_update_values_with_debounce_lib.c: 186: while(!(Button_Press.Full !=0 ? 1:0) && !TICK_E);
+"186
+[e $U 419  ]
+[e :U 420 ]
+[e :U 419 ]
+[e $ && ! != ? != -> . _Button_Press 0 `i -> 0 `i : -> 1 `i -> 0 `i -> 0 `i ! != -> _TICK_E `i -> -> -> 0 `i `uc `i 420  ]
+[e :U 421 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 188: switch(my_mch_state)
+"188
+[e $U 423  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 189: {
+"189
+{
+[; ;st_mch3_update_values_with_debounce_lib.c: 190: case MENU_0:
+"190
+[e :U 424 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 191: if (Button_Press.B0){
+"191
+[e $ ! != -> . . _Button_Press 1 0 `i -> -> -> 0 `i `uc `i 425  ]
+{
+[; ;st_mch3_update_values_with_debounce_lib.c: 192: my_mch_state = MENU_1;
+"192
+[e = _my_mch_state . `E4366 1 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 193: Window(1);
+"193
+[e ( _Window (1 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 194: PIR1bits.ADIF=0;
+"194
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 195: ADCON0bits.ADON=1;
+"195
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+"197
+}
+[e :U 425 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 197: }
+[; ;st_mch3_update_values_with_debounce_lib.c: 199: break;
+"199
+[e $U 422  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 200: case MENU_1:
+"200
+[e :U 426 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 201: if (Button_Press.B0){
+"201
+[e $ ! != -> . . _Button_Press 1 0 `i -> -> -> 0 `i `uc `i 427  ]
+{
+[; ;st_mch3_update_values_with_debounce_lib.c: 202: my_mch_state = MENU_0;
+"202
+[e = _my_mch_state . `E4366 0 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 203: Window(0);
+"203
+[e ( _Window (1 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 204: ADCON0bits.ADON=0;
+"204
+[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
+"205
 }
 [e :U 427 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 179: }
-[; ;st_mch3_update_values_with_debounce_lib.c: 180: break;
-"180
-[e $U 420  ]
-"181
-}
-[; ;st_mch3_update_values_with_debounce_lib.c: 181: }
-[e $U 420  ]
-"154
-[e :U 421 ]
-[e [\ _my_mch_state , $ . `E4344 0 422
- , $ . `E4344 1 424
- 426 ]
-"181
-[e :U 420 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 184: switch(my_mch_state)
-"184
-[e $U 429  ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 185: {
-"185
-{
-[; ;st_mch3_update_values_with_debounce_lib.c: 186: case MENU_0:
-"186
-[e :U 430 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 188: lcd_cursor(10,0);
-"188
-[e ( _lcd_cursor (2 , -> -> 10 `i `uc -> -> 0 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 189: lcd_display_value(Motor1.Desired);
-"189
-[e ( _lcd_display_value (1 . _Motor1 0 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 190: lcd_cursor(10, 1);
-"190
-[e ( _lcd_cursor (2 , -> -> 10 `i `uc -> -> 1 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 191: lcd_display_value(Motor1.Actual);
-"191
-[e ( _lcd_display_value (1 . _Motor1 1 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 199: LATC = 0x01;
-"199
-[e = _LATC -> -> 1 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 201: break;
-"201
-[e $U 428  ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 202: case MENU_1:
-"202
-[e :U 431 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 203: if (Button_Press.B1)
-"203
-[e $ ! != -> . . _Button_Press 1 1 `i -> -> -> 0 `i `uc `i 432  ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 204: {
-"204
-{
-[; ;st_mch3_update_values_with_debounce_lib.c: 205: Motor1.Desired=ADC_Result;
-"205
-[e = . _Motor1 0 _ADC_Result ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 205: }
+[; ;st_mch3_update_values_with_debounce_lib.c: 206: break;
 "206
-}
-[e :U 432 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 206: }
-[; ;st_mch3_update_values_with_debounce_lib.c: 208: ADC_Result=ADRESH>>2;
-"208
-[e = _ADC_Result -> >> -> _ADRESH `i -> 2 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 209: if (ADC_Result>51)
+[e $U 422  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 209: default:
 "209
-[e $ ! > -> _ADC_Result `i -> 51 `i 433  ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 210: {
-"210
-{
-[; ;st_mch3_update_values_with_debounce_lib.c: 211: ADC_Result=50;
-"211
-[e = _ADC_Result -> -> 50 `i `uc ]
-"212
-}
-[e :U 433 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 212: }
-[; ;st_mch3_update_values_with_debounce_lib.c: 213: ADCON0bits.GO_nDONE=1;
-"213
-[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 215: lcd_cursor ( 10, 0 ) ;
-"215
-[e ( _lcd_cursor (2 , -> -> 10 `i `uc -> -> 0 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 216: lcd_display_value(ADC_Result);
-"216
-[e ( _lcd_display_value (1 _ADC_Result ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 217: lcd_cursor ( 10, 1 ) ;
-"217
-[e ( _lcd_cursor (2 , -> -> 10 `i `uc -> -> 1 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 218: lcd_display_value(Motor1.Desired);
-"218
-[e ( _lcd_display_value (1 . _Motor1 0 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 219: LATC= 0x02;
-"219
-[e = _LATC -> -> 2 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 220: break;
-"220
-[e $U 428  ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 222: default:
-"222
-[e :U 434 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 223: lcd_cursor ( 0, 0 ) ;
-"223
-[e ( _lcd_cursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 224: lcd_clear();
-"224
-[e ( _lcd_clear ..  ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 225: lcd_print ( problem );
-"225
-[e ( _lcd_print (1 _problem ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 226: LATC = 0x05;
-"226
-[e = _LATC -> -> 5 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 227: break;
-"227
-[e $U 428  ]
-"228
-}
-[; ;st_mch3_update_values_with_debounce_lib.c: 228: }
-[e $U 428  ]
-"184
-[e :U 429 ]
-[e [\ _my_mch_state , $ . `E4344 0 430
- , $ . `E4344 1 431
- 434 ]
-"228
 [e :U 428 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 230: Button_Press.Full = 0;
-"230
-[e = . _Button_Press 0 -> -> 0 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 232: TICK_E=0;
+[; ;st_mch3_update_values_with_debounce_lib.c: 210: if (Button_Press.B0){
+"210
+[e $ ! != -> . . _Button_Press 1 0 `i -> -> -> 0 `i `uc `i 429  ]
+{
+[; ;st_mch3_update_values_with_debounce_lib.c: 211: my_mch_state = MENU_0;
+"211
+[e = _my_mch_state . `E4366 0 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 212: Window(0);
+"212
+[e ( _Window (1 -> -> 0 `i `uc ]
+"213
+}
+[e :U 429 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 213: }
+[; ;st_mch3_update_values_with_debounce_lib.c: 214: break;
+"214
+[e $U 422  ]
+"215
+}
+[; ;st_mch3_update_values_with_debounce_lib.c: 215: }
+[e $U 422  ]
+"188
+[e :U 423 ]
+[e [\ _my_mch_state , $ . `E4366 0 424
+ , $ . `E4366 1 426
+ 428 ]
+"215
+[e :U 422 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 218: switch(my_mch_state)
+"218
+[e $U 431  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 219: {
+"219
+{
+[; ;st_mch3_update_values_with_debounce_lib.c: 220: case MENU_0:
+"220
+[e :U 432 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 222: lcd_cursor(10,0);
+"222
+[e ( _lcd_cursor (2 , -> -> 10 `i `uc -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 223: lcd_display_value(Motor1.Desired);
+"223
+[e ( _lcd_display_value (1 . _Motor1 0 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 224: test = captured;
+"224
+[e = _test _captured ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 225: Motor1.Actual= t1clk/test;
+"225
+[e = . _Motor1 1 -> / _t1clk -> _test `um `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 226: lcd_cursor(10, 1);
+"226
+[e ( _lcd_cursor (2 , -> -> 10 `i `uc -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 227: lcd_display_value(Motor1.Actual);
+"227
+[e ( _lcd_display_value (1 . _Motor1 1 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 232: break;
 "232
-[e = _TICK_E -> -> 0 `i `uc ]
-"233
-}
-[e :U 414 ]
-"147
-[e $U 415  ]
-[e :U 416 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 233: }
-[; ;st_mch3_update_values_with_debounce_lib.c: 234: }
-"234
-[e :UE 413 ]
-}
+[e $U 430  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 236: case MENU_1:
+"236
+[e :U 433 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 237: if (Button_Press.B1)
 "237
+[e $ ! != -> . . _Button_Press 1 1 `i -> -> -> 0 `i `uc `i 434  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 238: {
+"238
+{
+[; ;st_mch3_update_values_with_debounce_lib.c: 239: Motor1.Desired=ADC_Result;
+"239
+[e = . _Motor1 0 _ADC_Result ]
+"240
+}
+[e :U 434 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 240: }
+[; ;st_mch3_update_values_with_debounce_lib.c: 242: ADC_Result=ADRESH>>2;
+"242
+[e = _ADC_Result -> >> -> _ADRESH `i -> 2 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 243: if (ADC_Result>51)
+"243
+[e $ ! > -> _ADC_Result `i -> 51 `i 435  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 244: {
+"244
+{
+[; ;st_mch3_update_values_with_debounce_lib.c: 245: ADC_Result=50;
+"245
+[e = _ADC_Result -> -> 50 `i `uc ]
+"246
+}
+[e :U 435 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 246: }
+[; ;st_mch3_update_values_with_debounce_lib.c: 247: ADCON0bits.GO_nDONE=1;
+"247
+[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 249: lcd_cursor ( 10, 0 ) ;
+"249
+[e ( _lcd_cursor (2 , -> -> 10 `i `uc -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 250: lcd_display_value(ADC_Result);
+"250
+[e ( _lcd_display_value (1 _ADC_Result ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 251: lcd_cursor ( 10, 1 ) ;
+"251
+[e ( _lcd_cursor (2 , -> -> 10 `i `uc -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 252: lcd_display_value(Motor1.Desired);
+"252
+[e ( _lcd_display_value (1 . _Motor1 0 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 254: break;
+"254
+[e $U 430  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 256: default:
+"256
+[e :U 436 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 257: lcd_cursor ( 0, 0 ) ;
+"257
+[e ( _lcd_cursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 258: lcd_clear();
+"258
+[e ( _lcd_clear ..  ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 259: lcd_print ( problem );
+"259
+[e ( _lcd_print (1 _problem ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 261: break;
+"261
+[e $U 430  ]
+"262
+}
+[; ;st_mch3_update_values_with_debounce_lib.c: 262: }
+[e $U 430  ]
+"218
+[e :U 431 ]
+[e [\ _my_mch_state , $ . `E4366 0 432
+ , $ . `E4366 1 433
+ 436 ]
+"262
+[e :U 430 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 264: Button_Press.Full = 0;
+"264
+[e = . _Button_Press 0 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 266: TICK_E=0;
+"266
+[e = _TICK_E -> -> 0 `i `uc ]
+"267
+}
+[e :U 416 ]
+"181
+[e $U 417  ]
+[e :U 418 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 267: }
+[; ;st_mch3_update_values_with_debounce_lib.c: 268: }
+"268
+[e :UE 415 ]
+}
+"271
 [v _Initial `(v ~T0 @X0 1 ef ]
 {
-[; ;st_mch3_update_values_with_debounce_lib.c: 237: void Initial(void){
+[; ;st_mch3_update_values_with_debounce_lib.c: 271: void Initial(void){
 [e :U _Initial ]
 [f ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 238: ADCON0 = 0x01;
-"238
+[; ;st_mch3_update_values_with_debounce_lib.c: 272: ADCON0 = 0x01;
+"272
 [e = _ADCON0 -> -> 1 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 239: ADCON1 = 0x0E;
-"239
+[; ;st_mch3_update_values_with_debounce_lib.c: 273: ADCON1 = 0x0E;
+"273
 [e = _ADCON1 -> -> 14 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 240: ADCON2 = 0x17;
-"240
+[; ;st_mch3_update_values_with_debounce_lib.c: 274: ADCON2 = 0x17;
+"274
 [e = _ADCON2 -> -> 23 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 241: TRISA = 0x01;
-"241
+[; ;st_mch3_update_values_with_debounce_lib.c: 275: TRISA = 0x01;
+"275
 [e = _TRISA -> -> 1 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 242: TRISB = 0xFF;
-"242
+[; ;st_mch3_update_values_with_debounce_lib.c: 276: TRISB = 0xFF;
+"276
 [e = _TRISB -> -> 255 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 243: TRISC = 0x00;
-"243
+[; ;st_mch3_update_values_with_debounce_lib.c: 277: TRISC = 0x00;
+"277
 [e = _TRISC -> -> 0 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 245: LATC = 0xff;
-"245
-[e = _LATC -> -> 255 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 246: delay_s(3);
-"246
+[; ;st_mch3_update_values_with_debounce_lib.c: 278: TRISE = 0x00;
+"278
+[e = _TRISE -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 279: TRISCbits.RC2=1;
+"279
+[e = . . _TRISCbits 1 2 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 283: LATE = 0xff;
+"283
+[e = _LATE -> -> 255 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 284: delay_s(3);
+"284
 [e ( _delay_s (1 -> -> 3 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 247: LATC = 0x00;
-"247
-[e = _LATC -> -> 0 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 250: OpenTimer0( 0b11111111 & 0b10111111 & 0b11011111 & 0b11110000);
-"250
-[e ( _OpenTimer0 (1 -> & & & -> 255 `i -> 191 `i -> 223 `i -> 240 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 251: WriteTimer0(40960);
-"251
-[e ( _WriteTimer0 (1 -> -> 40960 `l `ui ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 252: (INTCONbits.GIE = 1);
-"252
+[; ;st_mch3_update_values_with_debounce_lib.c: 285: LATE = 0x00;
+"285
+[e = _LATE -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 288: OpenTimer0( 0b11111111 & 0b10111111 & 0b11011111 & 0b11111111);
+"288
+[e ( _OpenTimer0 (1 -> & & & -> 255 `i -> 191 `i -> 223 `i -> 255 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 289: WriteTimer0(45536);
+"289
+[e ( _WriteTimer0 (1 -> -> 45536 `l `ui ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 290: (INTCONbits.GIE = 1);
+"290
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 256: }
-"256
-[e :UE 435 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 293: T2CONbits.TMR2ON=1;
+"293
+[e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 294: T2CONbits.T2OUTPS3=0;
+"294
+[e = . . _T2CONbits 1 6 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 295: T2CONbits.T2OUTPS2=0;
+"295
+[e = . . _T2CONbits 1 5 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 296: T2CONbits.T2OUTPS1=0;
+"296
+[e = . . _T2CONbits 1 4 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 297: T2CONbits.T2OUTPS0=0;
+"297
+[e = . . _T2CONbits 1 3 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 299: CCP2CONbits.CCP2M3=1;
+"299
+[e = . . _CCP2CONbits 1 3 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 300: CCP2CONbits.CCP2M2=1;
+"300
+[e = . . _CCP2CONbits 1 2 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 301: CCP2CONbits.CCP2M1=0;
+"301
+[e = . . _CCP2CONbits 1 1 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 302: CCP2CONbits.CCP2M0=1;
+"302
+[e = . . _CCP2CONbits 1 0 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 304: PR2=100;
+"304
+[e = _PR2 -> -> 100 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 307: CCP1CONbits.CCP1M3=0;
+"307
+[e = . . _CCP1CONbits 1 3 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 308: CCP1CONbits.CCP1M2=1;
+"308
+[e = . . _CCP1CONbits 1 2 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 309: CCP1CONbits.CCP1M1=0;
+"309
+[e = . . _CCP1CONbits 1 1 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 310: CCP1CONbits.CCP1M0=1;
+"310
+[e = . . _CCP1CONbits 1 0 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 311: PIE1bits.CCP1IE=1;
+"311
+[e = . . _PIE1bits 0 2 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 315: T1CONbits.RD16=1;
+"315
+[e = . . _T1CONbits 1 6 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 316: T1CONbits.TMR1CS=0;
+"316
+[e = . . _T1CONbits 1 1 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 317: T1CONbits.TMR1ON=1;
+"317
+[e = . . _T1CONbits 1 0 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 318: T1CONbits.T1CKPS1=1;
+"318
+[e = . . _T1CONbits 2 4 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 319: T1CONbits.T1CKPS0=1;
+"319
+[e = . . _T1CONbits 2 3 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 321: control1.kp=0.4;
+"321
+[e = . _control1 0 -> .0.4 `f ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 322: control1.ki=0.3;
+"322
+[e = . _control1 1 -> .0.3 `f ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 323: control1.kpki=0.7;
+"323
+[e = . _control1 2 -> .0.7 `f ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 324: control1.en=0;
+"324
+[e = . _control1 3 -> -> 0 `i `c ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 325: control1.en_1=0;
+"325
+[e = . _control1 4 -> -> 0 `i `c ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 326: control1.un=30;
+"326
+[e = . _control1 5 -> -> 30 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 327: control1.un_1=30;
+"327
+[e = . _control1 6 -> -> 30 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 329: Motor1.Actual=0;
+"329
+[e = . _Motor1 1 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 330: Motor1.Desired=20;
+"330
+[e = . _Motor1 0 -> -> 20 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 331: }
+"331
+[e :UE 437 ]
 }
-"258
+"333
+[v _Set `(v ~T0 @X0 1 ef ]
+"334
+{
+[; ;st_mch3_update_values_with_debounce_lib.c: 333: void Set(void)
+[; ;st_mch3_update_values_with_debounce_lib.c: 334: {
+[e :U _Set ]
+[f ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 335: OSCCONbits.IRCF2=1;
+"335
+[e = . . _OSCCONbits 1 6 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 336: OSCCONbits.IRCF1=1;
+"336
+[e = . . _OSCCONbits 1 5 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 337: OSCCONbits.IRCF0=1;
+"337
+[e = . . _OSCCONbits 1 4 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 338: OSCCONbits.SCS1=1;
+"338
+[e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 339: OSCCONbits.SCS0=0;
+"339
+[e = . . _OSCCONbits 1 0 -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 341: }
+"341
+[e :UE 438 ]
+}
+"343
+[v _flash `(v ~T0 @X0 1 ef ]
+"344
+{
+[; ;st_mch3_update_values_with_debounce_lib.c: 343: void flash(void)
+[; ;st_mch3_update_values_with_debounce_lib.c: 344: {
+[e :U _flash ]
+[f ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 345: PORTE = 0x01;
+"345
+[e = _PORTE -> -> 1 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 346: delay_s(5);
+"346
+[e ( _delay_s (1 -> -> 5 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 347: PORTE = 0x00;
+"347
+[e = _PORTE -> -> 0 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 348: delay_s(5);
+"348
+[e ( _delay_s (1 -> -> 5 `i `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 349: }
+"349
+[e :UE 439 ]
+}
+"351
 [v _Window `(v ~T0 @X0 1 ef1`uc ]
-"259
+"352
 {
-[; ;st_mch3_update_values_with_debounce_lib.c: 258: void Window(unsigned char num)
-[; ;st_mch3_update_values_with_debounce_lib.c: 259: {
+[; ;st_mch3_update_values_with_debounce_lib.c: 351: void Window(unsigned char num)
+[; ;st_mch3_update_values_with_debounce_lib.c: 352: {
 [e :U _Window ]
-"258
 [v _num `uc ~T0 @X0 1 r1 ]
-"259
 [f ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 260: lcd_clear();
-"260
+[; ;st_mch3_update_values_with_debounce_lib.c: 353: lcd_clear();
+"353
 [e ( _lcd_clear ..  ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 261: lcd_cursor ( 0, 0 ) ;
-"261
+[; ;st_mch3_update_values_with_debounce_lib.c: 354: lcd_cursor ( 0, 0 ) ;
+"354
 [e ( _lcd_cursor (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 262: lcd_print ( msg_ary[num*2]);
-"262
+[; ;st_mch3_update_values_with_debounce_lib.c: 355: lcd_print ( msg_ary[num*2]);
+"355
 [e ( _lcd_print (1 &U *U + &U _msg_ary * -> -> * -> _num `i -> 2 `i `ui `ux -> * -> # *U &U *U &U _msg_ary `ui -> -> 16 `i `ui `ux ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 263: lcd_cursor ( 0, 1 ) ;
-"263
+[; ;st_mch3_update_values_with_debounce_lib.c: 356: lcd_cursor ( 0, 1 ) ;
+"356
 [e ( _lcd_cursor (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 264: lcd_print ( msg_ary[(num*2)+1]);
-"264
+[; ;st_mch3_update_values_with_debounce_lib.c: 357: lcd_print ( msg_ary[(num*2)+1]);
+"357
 [e ( _lcd_print (1 &U *U + &U _msg_ary * -> -> + * -> _num `i -> 2 `i -> 1 `i `ui `ux -> * -> # *U &U *U &U _msg_ary `ui -> -> 16 `i `ui `ux ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 265: }
-"265
-[e :UE 436 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 358: }
+"358
+[e :UE 440 ]
 }
-"268
+"361
 [v _delay_s `(v ~T0 @X0 1 ef1`uc ]
-"269
+"362
 {
-[; ;st_mch3_update_values_with_debounce_lib.c: 268: void delay_s(unsigned char secs)
-[; ;st_mch3_update_values_with_debounce_lib.c: 269: {
+[; ;st_mch3_update_values_with_debounce_lib.c: 361: void delay_s(unsigned char secs)
+[; ;st_mch3_update_values_with_debounce_lib.c: 362: {
 [e :U _delay_s ]
-"268
+"361
 [v _secs `uc ~T0 @X0 1 r1 ]
-"269
+"362
 [f ]
-"270
+[; ;st_mch3_update_values_with_debounce_lib.c: 363: num=25;
+"363
+[e = _num -> -> 25 `i `uc ]
+"365
 [v _i `uc ~T0 @X0 1 a ]
 [v _j `uc ~T0 @X0 1 a ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 270: unsigned char i,j;
-[; ;st_mch3_update_values_with_debounce_lib.c: 271: for(j=0;j<secs;j++)
-"271
+[; ;st_mch3_update_values_with_debounce_lib.c: 365: unsigned char i,j;
+[; ;st_mch3_update_values_with_debounce_lib.c: 366: for(j=0;j<secs;j++)
+"366
 {
 [e = _j -> -> 0 `i `uc ]
-[e $U 441  ]
-"272
-[e :U 438 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 272: {
+[e $U 445  ]
+"367
+[e :U 442 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 367: {
 {
-[; ;st_mch3_update_values_with_debounce_lib.c: 273: for (i=0;i<25;i++)
-"273
+[; ;st_mch3_update_values_with_debounce_lib.c: 368: for (i=0;i<num;i++)
+"368
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 25 `i 442  ]
-[e $U 443  ]
-"274
-[e :U 442 ]
-[; ;st_mch3_update_values_with_debounce_lib.c: 274: _delay((unsigned long)((40)*(19660800/4000.0)));
-[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 19660800 `l `d .4000.0 `ul ]
-"273
+[e $U 449  ]
+"369
+[e :U 446 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 369: _delay((unsigned long)((40)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"368
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 25 `i 442  ]
-[e :U 443 ]
-"274
+[e :U 449 ]
+[e $ < -> _i `i -> _num `i 446  ]
+[e :U 447 ]
+"369
 }
-"276
+"371
 }
-"271
+"366
 [e ++ _j -> -> 1 `i `uc ]
-[e :U 441 ]
-[e $ < -> _j `i -> _secs `i 438  ]
-[e :U 439 ]
-"276
+[e :U 445 ]
+[e $ < -> _j `i -> _secs `i 442  ]
+[e :U 443 ]
+"371
 }
-[; ;st_mch3_update_values_with_debounce_lib.c: 276: }
-[; ;st_mch3_update_values_with_debounce_lib.c: 277: }
-"277
-[e :UE 437 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 371: }
+[; ;st_mch3_update_values_with_debounce_lib.c: 372: }
+"372
+[e :UE 441 ]
+}
+"374
+[v _Controller_Func `(v ~T0 @X0 1 ef ]
+"375
+{
+[; ;st_mch3_update_values_with_debounce_lib.c: 374: void Controller_Func(void)
+[; ;st_mch3_update_values_with_debounce_lib.c: 375: {
+[e :U _Controller_Func ]
+[f ]
+"376
+[v _temp `f ~T0 @X0 1 a ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 376: float temp=0;
+[e = _temp -> -> 0 `i `f ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 377: control1.en_1= control1.en;
+"377
+[e = . _control1 4 . _control1 3 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 378: control1.en= Motor1.Desired-Motor1.Actual;
+"378
+[e = . _control1 3 -> - -> . _Motor1 0 `i -> . _Motor1 1 `i `c ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 379: control1.un_1= control1.un;
+"379
+[e = . _control1 6 . _control1 5 ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 381: temp=((control1.kpki)*(control1.en))-((control1.kp*control1.en_1));
+"381
+[e = _temp - * . _control1 2 -> . _control1 3 `f * . _control1 0 -> . _control1 4 `f ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 382: control1.un=control1.un_1+temp;
+"382
+[e = . _control1 5 -> + -> . _control1 6 `f _temp `uc ]
+[; ;st_mch3_update_values_with_debounce_lib.c: 383: }
+"383
+[e :UE 450 ]
 }
 [a 2C 82 101 97 100 121 32 116 111 32 103 111 0 ]
 [a 1C 80 114 111 98 108 101 109 0 ]
